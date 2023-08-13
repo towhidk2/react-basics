@@ -1,9 +1,12 @@
-// import logo from './logo.svg';
-import './App.css';
+import Heading from "./Heading";
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <div className="App">
+      This is the starting code for "Your first component" ungraded lab
+      <Heading firstName="Abrar" />
+      <Heading firstName="Ahsan" />
+    </div>
   );
 }
 
