@@ -1,11 +1,14 @@
-import Heading from "./Heading";
+// import "./App.css";
+import Card from "./Card";
 
 function App() {
   return (
     <div className="App">
-      This is the starting code for "Your first component" ungraded lab
-      <Heading firstName="Abrar" />
-      <Heading firstName="Ahsan" />
+      <h1>Hello World!</h1>
+      <Card h2="First card's h2" h3="First card's h3" />
+      {/* <Card h2="Second card's h2" h3="Second card's h3" /> */}
+      {/* <Card h2="Third card's h2" h3="Third card's h3" /> */}
+
     </div>
   );
 }
