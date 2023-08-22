@@ -1,13 +1,13 @@
-// import "./App.css";
-import Card from "./Card";
+import "./App.css";
+import LoginForm from "./components/loginForm/LoginForm";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
-      <Card h2="First card's h2" h3="First card's h3" />
-      {/* <Card h2="Second card's h2" h3="Second card's h3" /> */}
-      {/* <Card h2="Third card's h2" h3="Third card's h3" /> */}
+        <h1>React form with hooks</h1>
+        <div>
+            <LoginForm />
+        </div>
 
     </div>
   );
