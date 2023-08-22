@@ -1,0 +1,13 @@
+form {
+    max-width: 20rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1rem;
+}
+
+span {
+    color: brown;
+}
