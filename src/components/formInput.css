@@ -1,17 +1,22 @@
-input {
-    padding: 15px;
-    margin: 10px 0px;
-    width: 280px;
-}
-.formInput{
+.formInput {
     display: flex;
-    flex-flow: column nowrap;
-    border-radius: 5px;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    width: 280px;
 }
 
 label {
-    font-size: 14px;
-    color: gray;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
 }
 
 span {
@@ -21,6 +26,17 @@ span {
     display: none;
 }
 
-input:invalid ~ span {
+input:invalid[focused="true"]{
+    border: 1px solid red;
+}
+
+input:invalid[focused="true"] ~ span {
     display: block;
 }
+
+
+
+
+
+
+

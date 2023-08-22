@@ -11,7 +11,7 @@ function App() {
         password: "",
         confirmPassword: ""
     })
-    
+
     const inputs = [
         {
             id: 1,
@@ -46,7 +46,7 @@ function App() {
             placeholder: "Password",
             errorMessage: "Password should be 8-20 characters and include at least 1 letter, 1 number and 1 special character!",
             label: "Password",
-            pattern: `^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{8,20}$`,
+            pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
             required: true
         },
         {
@@ -56,6 +56,7 @@ function App() {
             placeholder: "Confirm Password",
             errorMessage: "Passwords don't match!",
             label: "Confirm Password",
+            pattern: values.password,
             required: true
         }
 
@@ -83,18 +84,17 @@ function App() {
             <form onSubmit={handleSubmit}>
                 <h1>Register</h1>
                 {inputs.map(input => (
-                    <FormInput 
-                    key={input.id} 
-                    {...input} 
-                    value={values[input.name]} 
-                    onChange={onChange}    
-                />
+                    <FormInput
+                        key={input.id}
+                        {...input}
+                        value={values[input.name]}
+                        onChange={onChange}
+                    />
                 ))}
-
                 <button>Submit</button>
             </form>
-    </div>
-  );
+        </div>
+    );
 }
 
 export default App;
